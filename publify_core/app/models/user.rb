@@ -94,7 +94,7 @@ class User < ApplicationRecord
   end
 
   def text_filter
-    TextFilter.make_filter(text_filter_name)
+    TextFilter.find_or_default(text_filter_name)
   end
 
   def self.to_prefix
